@@ -9,9 +9,9 @@ from sklearn_extra.cluster import KMedoids
 
 def get_optimal_K_med(k_max, settype):
     if settype == "train":
-        df = pd.read_csv('adults_ohs_train.csv')
+        df = pd.read_csv(Path('csv_files','adults_ohn_train.csv'))
     else:
-        df = pd.read_csv('adults_ohs_test.csv')
+        df = pd.read_csv(Path('csv_files','adults_ohn_test.csv'))
 
     print(settype)
     wcss = []
@@ -21,7 +21,7 @@ def get_optimal_K_med(k_max, settype):
     #ar_scores = []
     print(1)
     # for k = 1
-    kmedoids = KMedoids(n_clusters=1, max_iter=5000, random_state=42, init='random')
+    kmedoids = KMedoids(n_clusters=1, max_iter=5000, random_state=42)
     kmedoids.fit_predict(df)
     print("za peirwszym klastrowaniem")
     wcss.append(kmedoids.inertia_)
@@ -56,7 +56,7 @@ def get_optimal_K_med(k_max, settype):
     measures.index += 1
 
 
-    measures.to_csv(f'K-medoids_measures_ohs_{settype}.csv')
+    measures.to_csv(f'K-medoids_measures_ohn_{settype}.csv')
 
     return measures
 
