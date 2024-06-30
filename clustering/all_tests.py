@@ -132,11 +132,11 @@ if __name__ == '__main__':
     #optimal_K_means(ohs_train, ohs_test, 8, 'ohs')
     #optimal_K_means(ohn_train, ohn_test, 3, 'ohn')
     
-    optimal_K_medoids(ohs_train, ohs_test, 3, 'ohs')
-    optimal_K_medoids(ohn_train, ohn_test, 5, 'ohn')
+    #optimal_K_medoids(ohs_train, ohs_test, 3, 'ohs')
+    #optimal_K_medoids(ohn_train, ohn_test, 5, 'ohn')
     
     #optimal_K_prototype(std_train, std_test, 6, 'std')
     #optimal_K_prototype(norm_train, norm_test, 2, 'norm')
     
-    #optimal_agglomerative(ohs_train, ohs_test, 2, 'ohs')
+    optimal_agglomerative(ohs_train, ohs_test, 8, 'ohs')
     #optimal_agglomerative(ohn_train, ohn_test, 2, 'ohn')
