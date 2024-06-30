@@ -10,9 +10,9 @@ from sklearn.metrics import silhouette_score, davies_bouldin_score, calinski_har
 def K_Prot(k_max, settype):
     
     if settype == "train":
-        df = pd.read_csv(Path('csv_files','adults_norm_train.csv'))
+        df = pd.read_csv(Path('csv_files','adults_std_train.csv'))
     else:
-        df = pd.read_csv(Path('csv_files','adults_norm_test.csv'))
+        df = pd.read_csv(Path('csv_files','adults_std_test.csv'))
         
     print(settype)
     
@@ -45,7 +45,7 @@ def K_Prot(k_max, settype):
     res_df.index += 1
     
     # Save results to CSV
-    res_df.to_csv(f'k-prototype_norm_{settype}.csv')
+    res_df.to_csv(f'k-prototype_std_{settype}.csv')
     
     return res_df
 
