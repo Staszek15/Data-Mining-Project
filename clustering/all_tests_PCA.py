@@ -168,15 +168,15 @@ def agg(df, k_max, stdtype):
 
 if __name__ == "__main__":
     
-    train_ohs = pd.read_csv(Path('csv_files','PCA_ohs_train.csv'), index_col=0)
-    test_ohs = pd.read_csv(Path('csv_files','PCA_ohs_test.csv'), index_col=0)
+    train_ohs = pd.read_csv(Path('csv_files','PCA2_ohs_train.csv'), index_col=0)
+    test_ohs = pd.read_csv(Path('csv_files','PCA2_ohs_test.csv'), index_col=0)
     
-    train_ohn = pd.read_csv(Path('csv_files','PCA_ohn_train.csv'), index_col=0)
-    test_ohn = pd.read_csv(Path('csv_files','PCA_ohn_test.csv'), index_col=0)
+    train_ohn = pd.read_csv(Path('csv_files','PCA2_ohn_train.csv'), index_col=0)
+    test_ohn = pd.read_csv(Path('csv_files','PCA2_ohn_test.csv'), index_col=0)
     
     print("###### medoids ###### ")
-    #K_Medoids(train_ohs, 10, 'ohs')
-    #K_Medoids(train_ohn, 10, 'ohn')
+    K_Medoids(train_ohs, 10, 'ohs')
+    K_Medoids(train_ohn, 10, 'ohn')
     
     print("###### means ###### ")
     K_Means(train_ohs, 10, 'ohs')
@@ -187,8 +187,8 @@ if __name__ == "__main__":
     #K_Prot(train_norm, 10, 'norm')
     
     print("###### agg ###### ")
-    #agg(train_ohs, 10, 'ohs')
-    #agg(train_ohn, 10, 'ohn')
+    agg(train_ohs, 10, 'ohs')
+    agg(train_ohn, 10, 'ohn')
     
     
 
